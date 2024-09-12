@@ -1,0 +1,141 @@
+/* Reset básico e configurações gerais */ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 800;
+    background-image: url(imagens2/fundo.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Container principal */
+.container {
+    background-color: rgba(0, 87, 179, 0.889); /* Azul escuro translúcido */
+    padding: 30px;
+    width: 90%;
+    max-width: 700px;
+    min-height: 60px;
+    border: 4px solid black;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaçamento entre os elementos */
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+    transform: scale(0.6); /* Reduz a `.container` para 60% do tamanho */
+    transform-origin: center; /* Mantém o centro da `.container` fixo */
+}
+/* Redes sociais */
+.redessociais {
+    display: flex;
+    flex-direction: column; /* Alinhamento vertical */
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+.redessociais ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.redessociais li {
+    display: flex; /* Aplica flexbox aos itens da lista */
+    align-items: center; /* Alinha verticalmente o conteúdo */
+    gap: 10px; /* Espaçamento entre texto e imagem */
+}
+  /* Estilos para imagem dentro de li */
+  .redessociais li img {
+    width: 25px; /* Ajuste a largura da imagem */
+    height: 25px; /* Ajuste a altura da imagem */
+  }
+.redessociais a {
+    text-decoration: none; /* Corrigido */
+    color: black; /* Texto preto */
+    font-size: 22px;
+    padding: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Corrigido */
+}
+.redessociais a:hover {
+    transform: scale(1.1); /* Aumenta o ícone ao passar o mouse */
+    background-color: rgba(0, 0, 0, 0.1); /* Fundo ao passar o mouse */
+    border-radius: 10px; /* Arredonda os links ao passar o mouse */
+}
+/* Estilos para h1 */
+h1 {
+    font-size: 60px;
+    color: black; /* Texto preto */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+/* Estilos para h2 */
+h2 {
+    font-size: 30px;
+    color: black; /* Texto preto */
+    margin-bottom: 15px;
+}
+/* Estilo da foto de perfil ou ícone */
+.icon {
+    width: 200px; /* Aumentado para 200px */
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid black;
+    object-fit: cover;
+    margin: 0 auto;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+.icon:hover {
+    transform: scale(1.1); /* Efeito hover para aumentar a imagem */
+}
+/* Parágrafos */
+p {
+    font-size: 20px;
+    color: black; /* Texto preto */
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+p:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Efeito hover para parágrafos */
+}
+/* Lista para redes sociais */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+        transform: scale(0.8); /* Ajuste para telas menores */
+    }
+    h1 {
+        font-size: 48px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    .icon {
+        width: 150px;
+        height: 150px;
+    }
+    p {
+        font-size: 18px;
+    }
+}
